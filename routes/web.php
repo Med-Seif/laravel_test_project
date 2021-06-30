@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get(
+    '/',
+    function () {
+        return view('welcome');
+    }
+);
+Route::get('members', [\App\Http\Controllers\MemberController::class, 'index']);
+Route::get('teams', [\App\Http\Controllers\TeamController::class, 'index']);

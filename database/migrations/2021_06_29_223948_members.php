@@ -17,8 +17,7 @@ class Members extends Migration
             $table->unsignedBigInteger('id')->autoIncrement();
             $table->string('name');
             $table->string('email');
-            $table->unsignedBigInteger('team_id');
-            $table->foreign('team_id')->references('id')->on('teams');
+            $table->unsignedBigInteger('team_id')->nullable()->default(null);
         });
     }
 

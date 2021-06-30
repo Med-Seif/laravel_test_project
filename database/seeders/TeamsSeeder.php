@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Team;
 use Illuminate\Database\Seeder;
 
 class TeamsSeeder extends Seeder
@@ -13,6 +14,8 @@ class TeamsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Team::factory()
+            ->count(10)
+            ->create();
     }
 }
