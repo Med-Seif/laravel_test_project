@@ -9,4 +9,10 @@ class Member extends Model
 {
     public $timestamps = false;
     use HasFactory;
+
+
+    public function team()
+    {
+        return $this->hasOne(Team::class, 'id','team_id');
+    }
 }
